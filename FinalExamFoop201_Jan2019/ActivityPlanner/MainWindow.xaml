@@ -1,0 +1,28 @@
+﻿<Window x:Class="ActivityPlanner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ActivityPlanner"
+        mc:Ignorable="d"
+        Title="Activity Planner" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <ListBox x:Name="allActivitiesLbx" HorizontalAlignment="Left" Height="144" Margin="173,124,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="allActivitiesLbx_SelectionChanged"/>
+        <ListBox x:Name="selectedActivitiesLbx" HorizontalAlignment="Left" Height="144" Margin="473,124,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="selectedActivitiesLbx_SelectionChanged"/>
+        <RadioButton x:Name="allRadioBtn" Content="All" HorizontalAlignment="Left" Margin="40,124,0,0" VerticalAlignment="Top" Checked="filterByRadioButtons"/>
+        <RadioButton x:Name="LandRadioBtn" Content="Land" HorizontalAlignment="Left" Margin="40,164,0,0" VerticalAlignment="Top" Checked="filterByRadioButtons"/>
+        <RadioButton x:Name="WaterRadioBtn" Content="Water" HorizontalAlignment="Left" Margin="40,210,0,0" VerticalAlignment="Top" Checked="filterByRadioButtons"/>
+        <RadioButton x:Name="AirRadioBtn" Content="Air" HorizontalAlignment="Left" Margin="40,253,0,0" VerticalAlignment="Top" Checked="filterByRadioButtons"/>
+        <Button x:Name="addBtn" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="379,164,0,0" VerticalAlignment="Top" Width="75" Click="addBtn_Click"/>
+        <Button x:Name="removeBtn" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="379,207,0,0" VerticalAlignment="Top" Width="75" Click="removeBtn_Click"/>
+        <TextBlock x:Name="activityPlannerHeaderTxBl" HorizontalAlignment="Left" Margin="40,27,0,0" TextWrapping="Wrap" Text="Activity Planner" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock x:Name="allActivitiesTextTxBl" HorizontalAlignment="Left" Margin="174,102,0,0" TextWrapping="Wrap" Text="All activities" VerticalAlignment="Top"/>
+        <TextBlock x:Name="selectedActivitiesTextTxBl" HorizontalAlignment="Left" Margin="476,102,0,0" TextWrapping="Wrap" Text="Selected activities" VerticalAlignment="Top"/>
+        <TextBlock x:Name="CostHeaderTxBl" HorizontalAlignment="Left" Margin="476,31,0,0" TextWrapping="Wrap" Text="Total cost:" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="totalCostTxBl" HorizontalAlignment="Left" Margin="580,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="descriptionTextTxBl" HorizontalAlignment="Left" Margin="111,344,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="descriptionTxBl" HorizontalAlignment="Left" Margin="127,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="errorMsgTxBl" HorizontalAlignment="Left" Margin="310,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFEC0000"/>
+
+    </Grid>
+</Window>
